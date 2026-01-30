@@ -221,6 +221,46 @@ public class SinglyLinkedList<E> implements Cloneable {
     return sb.toString();
   }
   //main method
+    public void swapNode(Node<E> node1, Node<E> node2)
+    {
+        if (node1 == node2)// this if is in case is first node and second node are the same thing in that case
+        {//it cancels
+            return;
+        }
+        Node<E> previous1 = null;//this and the next line will store the nodes before the respectif previous node
+        Node<E> previous2 = null;
+        Node<E> walk = head;// to start at the head of the lsit
+        while (walk != null)
+        {
+            if (walk.getNext()==node1)// when the next node is node1, the node become the previous
+            {
+                previous1 = walk;
+            }
+            if (walk.getNext()==node2)// the same as the previous if
+            {
+                previous2 = walk;
+            }
+            walk=walk.getNext();// moving to the next node
+        }
+        if (previous1 == null)//in case if there is no node before it, aka node1,
+            //make the next node aka node2 the head
+        {
+            head = node2;
+        }else
+        {
+            previous1.setNext(node2);// node2 takes nodes1 spot
+        }
+        if (previous2== null)// if node2 is the start
+        {
+         head=node1;// turn node1 to the start
+        }else
+        {
+            previous2.setNext(node1);//node1 takes nodes2 spot
+        }
+        Node<E> modeTemp = node1.getNext();// creating a temporaily node just to save node1
+        node1.setNext(node2.getNext());// give node1 what ever was after node2
+        node2.setNext(modeTemp);// giving node2 the temporaily node content
+    }// the tldr it swaps the position of first node and the second node
   public static void main(String[] args)
   {
 	  
@@ -232,6 +272,9 @@ public class SinglyLinkedList<E> implements Cloneable {
 	  list.addFirst("LAX");
 	  System.out.println(list);
 	  //
+      list.swapNode(list.head,list.head.getNext());
+      System.out.println("after swap");
+      System.out.println(list);
   }
   
 }

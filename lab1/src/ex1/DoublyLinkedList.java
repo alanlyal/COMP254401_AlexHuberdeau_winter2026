@@ -20,7 +20,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package linkedlists;
+package ex1;
 
 /**
  * A basic doubly linked list implementation.
@@ -223,12 +223,28 @@ public class DoublyLinkedList<E> {
     sb.append(")");
     return sb.toString();
   }
+
+    public void concetenate(DoublyLinkedList<E> M)
+    {
+       if (M.isEmpty())// in case if M is empty, it will cancel the function
+       {
+           return;
+       }
+       Node<E> LastL= this.trailer.getPrev();// stores the last bit of data from list L
+        Node<E> FirstM= M.header.getNext();// stores the first bit of data from list M
+        LastL.setNext(FirstM);// this line and the next link each other by last bit of L to M and first bit of M to L
+        FirstM.setPrev(LastL);
+        this.trailer = M.trailer;// updates L to include the M list
+        this.size+= M.size;// jsut increases the size of m to allow the new bits
+    }//the tldr this function fuses the list M to the end of List L
+
 //main method
   public static void main(String[] args)
   {
+
 	  //create and populate a doubly linked list
 	  DoublyLinkedList<String> list = new DoublyLinkedList<String>();
-	  list.addFirst("MSP");
+	  list.addFirst("MSP");// my assuption is these are aiport codes
 	  list.addLast("ATL");
 	  list.addLast("BOS");
 	  //
@@ -236,6 +252,12 @@ public class DoublyLinkedList<E> {
 	  
 	  System.out.println(list);
 	  System.out.println(list.first());
+        DoublyLinkedList<String> listTest = new DoublyLinkedList<String>();
+        System.out.println("with concetenate");
+        listTest.addLast("YWG");// winnipeg airport code
+        listTest.addLast("YTH");// thompson airport coe
+        list.concetenate(listTest);// runs the functions concetenate with List Test
+        System.out.println(list);
 	  //
   }
 } //----------- end of DoublyLinkedList class -----------
