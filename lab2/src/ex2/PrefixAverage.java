@@ -58,5 +58,5 @@ public static void main(String[] args)
        System.out.println(n + " prefix1 " +time + "|" + " prefix2 " + time2);// print the input size and the result of
        //first clock and the second clock
    }
-
+//
 }
