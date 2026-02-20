@@ -18,4 +18,4 @@ public static void main(String[] args)
     int product = Task1.recursive(m,n); // call the recursive methode using m and n the user has put in
     System.out.println(" the product of " + m +" and " + n +" is " + product);
     scan.close();// close the scanner
-}
+}//
