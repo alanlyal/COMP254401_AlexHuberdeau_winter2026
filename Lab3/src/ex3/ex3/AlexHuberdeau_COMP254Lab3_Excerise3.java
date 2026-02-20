@@ -1,7 +1,7 @@
 package ex3;
 import java.util.Scanner;
 import java.io.File;
-public class Task3 {
+public class AlexHuberdeau_COMP254Lab3_Excerise3 {
     public static void find(File path, String filename)
     {
         if (path == null || !path.exists()) //if the path is invalid

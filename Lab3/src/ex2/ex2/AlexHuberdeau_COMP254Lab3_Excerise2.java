@@ -1,7 +1,7 @@
 package ex2;
 
 import java.util.Scanner;
-public class Task2 {
+public class AlexHuberdeau_COMP254Lab3_Excerise2 {
     public static boolean Palindrome(String word, int high, int low) {
         if (low >= high) {
             return true;
