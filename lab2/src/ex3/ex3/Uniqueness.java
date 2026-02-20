@@ -1,4 +1,4 @@
-package ex3;/*
+package ex3.ex3;/*
  * Copyright 2014, Michael T. Goodrich, Roberto Tamassia, Michael H. Goldwasser
  *
  * Developed for use with the book:

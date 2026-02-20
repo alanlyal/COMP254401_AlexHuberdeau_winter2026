@@ -39,6 +39,7 @@ class PrefixAverage {
 }
 public static void main(String[] args)
 {
+    System.out.println("excerise 2");
    int[] input={10,50,100,150,200};// list of input sizes
    for (int n : input)// the loop for each input size
    {
@@ -54,7 +55,6 @@ public static void main(String[] args)
        long time2 = System.nanoTime();// the 3 lines are the clock for the first prefix average
        PrefixAverage.prefixAverage2(array);//run algorithm
        time2= System.nanoTime() - time2;// calculates the time it took
-       System.out.println("excerise 2");
        System.out.println(n + " prefix1 " +time + "|" + " prefix2 " + time2);// print the input size and the result of
        //first clock and the second clock
    }
