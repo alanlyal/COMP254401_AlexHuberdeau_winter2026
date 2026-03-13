@@ -253,6 +253,6 @@ public void concatenate(SinglyLinkedList<E> other)
       System.out.println("before the concatenate Q1: " + Q1 + " | Q2: " + Q2);
       System.out.println("------------------------------------------------------");
       Q1.concatenate(Q2);
-      System.out.println("after the concatenate Q1: " + Q1 + " | Q2: " + Q2);
+      System.out.println("after the concatenate Q1: " + Q1 + " | Q2: " + Q2);//
   }
 }
