@@ -122,7 +122,7 @@ public class ArrayStack<E> implements Stack<E> {
   {
       while (!s.isEmpty())// loop until s is empty
       {
-          E element = s.pop();//remoce an element
+          E element = s.pop();//remoce an element from s
           t.push(element);// push the element to t stack
       }
   }
