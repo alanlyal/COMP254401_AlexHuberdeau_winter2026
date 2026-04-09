@@ -30,5 +30,6 @@ public class excersiseTest {
         System.out.println("true test, checking for a 2 " + map.containsKey(2)); //true test
         System.out.println("true test, checking for a 3 " + map.containsKey(3)); //true test
         System.out.println("false test, checking for a 3 " + map.containsKey(4)); //false test
+        //
     }
 }
