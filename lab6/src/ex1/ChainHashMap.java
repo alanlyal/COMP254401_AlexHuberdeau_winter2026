@@ -37,7 +37,7 @@ public class ChainHashMap<K,V> extends AbstractHashMap<K,V> {
 
   // provide same constructors as base class
   /** Creates a hash table with capacity 11 and prime factor 109345121. */
-  //excerise 1 stuff and the only new thing
+  //excerise 1 stuff////////////////////////////////
   public ChainHashMap(double loadFactor)
   {
       super(17,109345121, loadFactor);// creates the chain hash map with default values but max load can be changed

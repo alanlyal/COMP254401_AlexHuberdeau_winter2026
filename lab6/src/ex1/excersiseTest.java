@@ -2,10 +2,10 @@ package ex1;
 import java.util.Random;
 public class excersiseTest {
     public static void main(String[] args) {
+        System.out.println("excersice 1");
         double[] loads = {0.1, 0.2, 0.3, 0.4, 0.5};// list of loads to test
         int number = 100; // number of elements that can be inserted
         Random rand = new Random();// generates random key
-        System.out.println("excersice 1");
         for(double load:loads)// for loop for each load factor
         {
             System.out.println("current load factor: " + load);

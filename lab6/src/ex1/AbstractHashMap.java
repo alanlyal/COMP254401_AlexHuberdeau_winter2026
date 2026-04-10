@@ -51,13 +51,13 @@ public abstract class AbstractHashMap<K,V> extends AbstractMap<K,V> {
   private long scale, shift;           // the shift and scaling factors
 
   /** Creates a hash table with the given capacity and prime factor. */
-  //excerise 1 stuff
-  protected double maxLoadFactor;
+  //excerise 1 stuff////////////////////////////////////////////////////
+  protected double maxLoadFactor;//
 
     public AbstractHashMap(int cap, int p, double loadFactor ) {
     prime = p;
     capacity = cap;
-    maxLoadFactor = loadFactor; //set the max load also new
+    maxLoadFactor = loadFactor; //set the max load
     Random rand = new Random();
     scale = rand.nextInt(prime-1) + 1;
     shift = rand.nextInt(prime);
@@ -65,7 +65,7 @@ public abstract class AbstractHashMap<K,V> extends AbstractMap<K,V> {
   }
 
   /** Creates a hash table with given capacity and prime factor 109345121. */
-  // this section new
+  // excerise 1 stuff//////////////////////////////////////////
   public AbstractHashMap(int cap)
   {
       this(cap, 109345121, 0.5);// 0.5 is default load factor
@@ -119,6 +119,7 @@ public abstract class AbstractHashMap<K,V> extends AbstractMap<K,V> {
    * @return the previous value associated with the key (or null, if no such entry)
    */
   //updated put
+  //uodated this excerise 1/////////////////////////////////////////
   @Override
   public V put(K key, V value) {
     V answer = bucketPut(hashValue(key), key, value);
